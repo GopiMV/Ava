@@ -1,0 +1,32 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for Hello World example
+ */
+
+grammar hello;
+
+
+public <instruction> = (<command> | <end>);
+public <status> = ( <command2> | <end>);
+public <abstractSentence> = [<component>][<component>][<component>][<component>][<component>][<component>];
+
+
+/*Fix grammar list*/
+<command> = <request> <action> <program>;
+<command2> = <action> (<program> | <app>);
+<component> = (<adjective> | <verb> | <pronoun>);
+
+<adjective> = ( bitter | sweet | dumb );
+<verb> = (a);
+<pronoun> = (me | you | him | she | her | you're);
+
+
+
+<app> = (weather | mail);
+<end> = (finish);
+<request> = (Ava);
+<action> = (start | run | begin | open | launch);
+<program> = (chrome | games | note | music);
+
+
