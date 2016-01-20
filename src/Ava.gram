@@ -10,23 +10,26 @@ grammar hello;
 public <instruction> = (<command> | <end>);
 public <status> = ( <command2> | <end>);
 public <abstractSentence> = [<component>][<component>][<component>][<component>][<component>][<component>];
-
+public<searchGoogle> = (search <abstractSentence>);
 
 /*Fix grammar list*/
 <command> = <request> <action> <program>;
 <command2> = <action> (<program> | <app>);
-<component> = (<adjective> | <verb> | <pronoun>);
+<component> = (<adjective> | <verb> | <pronoun> | <noun>);
+
 
 <adjective> = ( bitter | sweet | dumb );
 <verb> = (a);
 <pronoun> = (me | you | him | she | her | you're);
+<noun> = (<country>);  //Add names and other nouns here
 
 
 
+<country> =  (India | Canada | China);
 <app> = (weather | mail);
 <end> = (finish);
 <request> = (Ava);
-<action> = (start | run | begin | open | launch);
-<program> = (chrome | games | note | music);
+<action> = (run | begin | open | launch | search);
+<program> = (chrome | games | note | music | mail);
 
 

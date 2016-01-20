@@ -1,4 +1,9 @@
 import java.io.IOException;
+import java.awt.Desktop;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+
 
 public class runProgram {
 	
@@ -25,6 +30,27 @@ public class runProgram {
 		try {
 			Process p = Runtime.getRuntime().exec(path);
 		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void googleSearch(String searchString){
+		String searchQuery = "https://www.google.ca/search?q=" + searchString.replace(" ", "+");
+		try {
+			Desktop.getDesktop().browse(new URI(searchQuery));
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void openMail(){
+		try {
+			Desktop.getDesktop().browse(new URI("http://www.gmail.com"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
 			e.printStackTrace();
 		}
 	}

@@ -42,17 +42,8 @@ public class HelloAva {
                 String resultText = result.getBestFinalResultNoFiller();
                 System.out.println("You said: " + resultText);
                 
-                if(resultText.contains("chrome")){
-                	runProgram program = new runProgram();
-                	program.executeChrome();
-                } else if (resultText.contains("game")){
-                	runProgram program = new runProgram();
-                	program.executeCSS();
-                } else if (resultText.contains("music")){
-                	runProgram program = new runProgram();
-                	program.executeSpotify();
-                } 
-                
+                stringProcessor userInput= new stringProcessor(resultText);
+                userInput.stringFlow();
                 	
             } else {
                 System.out.println("I can't hear what you said.\n");
