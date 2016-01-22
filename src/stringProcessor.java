@@ -24,7 +24,7 @@ public class stringProcessor {
         } else if (this.query.contains("mail")){
         	runProgram program = new runProgram();
         	program.openMail();
-        } 
+        }
 	}
 
 }
