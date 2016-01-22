@@ -24,6 +24,10 @@ public class stringProcessor {
         } else if (this.query.contains("mail")){
         	runProgram program = new runProgram();
         	program.openMail();
+        } else if(this.query.contains("find")){
+			String toGoogle = this.query.replaceAll("find ","");
+			runProgram program = new runProgram();
+			program.googleMap(toGoogle);
         }
 	}
 

@@ -45,6 +45,17 @@ public class runProgram {
 		}
 	}
 	
+	public void googleMap(String searchString){
+		String searchQuery = "https://www.google.ca/maps/place/" + searchString.replace(" ", "+");
+		try {
+			Desktop.getDesktop().browse(new URI(searchQuery));
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public void openMail(){
 		try {
 			Desktop.getDesktop().browse(new URI("http://www.gmail.com"));

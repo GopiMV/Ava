@@ -29,7 +29,7 @@ public<searchGoogle> = (search <abstractSentence>);
 <app> = (weather | mail);
 <end> = (finish);
 <request> = (Ava);
-<action> = (run | begin | open | launch | search);
+<action> = (run | begin | open | launch | search | find);
 <program> = (chrome | games | note | music | mail);
 
 
