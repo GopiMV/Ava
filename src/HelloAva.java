@@ -42,7 +42,7 @@ public class HelloAva {
                 String resultText = result.getBestFinalResultNoFiller();
                 System.out.println("You said: " + resultText);
                 
-                stringProcessor userInput= new stringProcessor(resultText);
+                stringProcessor userInput = new stringProcessor(resultText);
                 userInput.stringFlow();
                 	
             } else {
